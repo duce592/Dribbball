@@ -1,0 +1,83 @@
+<html><head>
+	
+	<!-- Meta Data -->
+	<meta charset="utf-8">
+	<meta name="Viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Description" content="Dribbball">
+	<meta name="Author" content="Devin Pike">
+	
+	<title>Dribbball</title>
+	
+	<!-- Latest compiled and minified bootstrap CSS -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+	<!-- jQuery css -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	
+	<!-- My Styling -->
+	<link rel="stylesheet" href="assets/css/main.css">
+
+		
+</head><body>
+	
+
+	<div id="player"></div>
+	<div id="shots"></div>
+
+	<div id="Landscape"></div>
+	
+
+
+<script class="template" type="text/template" id="contentLanscapeTemplate">
+	<div id="contentLandscape" style="background-image:url(<%=attributes.image_url%>)"></div>
+	<div class="imgDiv" style="background-image:url(<%=attributes.image_url%>)"></div>
+</script>
+
+<script class="template" id="shotTemplate" type="text/template">
+	<div class="clickable">
+		<div class="shot" style="background-image:url(<%=attributes.image_teaser_url%>);"></div>
+	</div>
+</script>
+
+
+<script class="template" type="text/template" id="playerTemplate">
+	<img src="<%=attributes.avatar_url%>" id="playerImg">
+	
+	<div class="lineDiv">
+		<div class="line"></div>
+	</div>
+
+	<div class="playerName"><%=attributes.name%></div>
+
+	<div class="playerAboutMe">User Interface and Icon Designer.</div>
+	
+	<div class="lineDiv">
+		<div class="line"></div>
+	</div>
+
+	<a href="<%=attributes.url%>"><i class="icon fa fa-dribbble" id="dribbble"></i></a>
+
+	<a href="https://twitter.com/<%=attributes.twitter_screen_name%>"><i class="icon fa fa-twitter" id="twitter"></i></a>
+	
+	<div id="locationDiv">
+		<i class="fa fa-map-marker fa-2x" id="locoMark"></i>
+		<div id="currentLocation">
+			<p>Living in</p>
+			<strong><%=attributes.location%></strong>
+		</div>
+	</div>
+</script>
+
+
+
+	<!-- ================| javascript |================ -->
+    <!-- Placed at the end of the document so the page load faster -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/underscore.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+	    
+</body></html>
